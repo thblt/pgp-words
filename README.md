@@ -30,7 +30,7 @@ into words:
 ```
 $ pgp-words d1c2 25e4 26c6 33dd 94d1  a7e8 c3f4 08aa 9b34 2488
 
-d1c225e426c633dd94d1a7e8c3f408aa9b342488:
+d1c2 25e4 26c6 33dd 94d1 a7e8 c3f4 08aa 9b34 2488:
 	stairway repellent bombast tradition
 	bookshelf responsive chisel tambourine
 	Pluto scavenger repay typewriter

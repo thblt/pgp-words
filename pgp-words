@@ -294,7 +294,7 @@ if __name__ == '__main__':
     if 1 == len(sys.argv):
         fps = sys.stdin.readlines()
     else:
-        fps = ["".join(sys.argv[1:])]
+        fps = [" ".join(sys.argv[1:])]
     for fp in fps:
         try:
             words = wordify(fp)
