@@ -1,0 +1,51 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" This file is part of pgp-words.
+.\" Copyright (c) 2017--2018 Thibault Polge <thibault@thb.lt>.
+.\"
+.\" pgp-words is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation; either version 3 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" pgp-words is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+.TH PGP-WORDS 1 "19 February 2020" "PGP-WORDS" "pgp-words Manual"
+
+.SH NAME
+pgp-words \- generate dictation-friendly hexadecimal equivalents
+
+.SH SYNOPSIS
+\fBpgp-words\fR [hexadecimal string]
+
+.SH DESCRIPTION
+\fBpgp-words\fR is an implementation of the \fIPGP Word List\fR. The
+word list was designed to make it easy to convey sequences of bytes
+using only voice, and is particularly suited for transmitting key
+fingerprints and other similar sequences over the phone. Even in the
+same physical place, it's easier to just read a bunch of words out
+loud than to spell a sequence of hex digits (was that 3 times F or
+3F?)
+
+Each word represents exactly one byte. To avoid errors, there are
+actually 512 words in the list (two per possible byte value) and words
+are selected depending on the parity of the byte position. For
+example, `0x9e` is `quiver` if the byte position in the sequence is an
+even number, `onlooker` if it is odd.
+
+.SH REFERENCE
+.TP
+\fIhttps://en.wikipedia.org/wiki/PGP_word_list\fR
+
+.SH COPYRIGHT
+Copyright \(co 2017-2018 Thibault Polge <thibault@thb.lt>.
+
+License GPLv3+ (<http://gnu.org/licenses/gpl.html>)
+
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
